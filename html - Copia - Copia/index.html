@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazém do Sítio - Produtos Artesanais e Hortifruti</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/products.css">
+    <link rel="stylesheet" href="css/components/cart.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <!-- Banner com logo -->
+        <div class="banner">
+            <img src="images/banner.png"Armazém do Sítio" class="banner-image">
+            <div class="logo-container">
+                <img src="images/logo.png"Logo Armazém do Sítio" class="logo">
+            </div>
+        </div>
+
+        <!-- Barra de busca -->
+        <div class="search-bar">
+            <div class="search-container">
+                <input type="text" placeholder="Buscar produtos..." class="search-input">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+
+        <!-- Categorias -->
+        <nav class="categories">
+            <div class="categories-container">
+                <span class="category-tag">🍏 Hortifruti</span>
+                <span class="category-tag">🧀 Frios</span>
+                <span class="category-tag">🥤 Bebidas</span>
+                <span class="category-tag">🍞 Padaria</span>
+                <span class="category-tag">🍫 Doces</span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Seção de Hortifruti -->
+        <section class="product-section">
+            <h2 class="section-title hortifruti">HORTIFRUTI</h2>
+            <div class="product-grid" id="hortifruti-grid">
+                <!-- Produtos serão gerados dinamicamente via JS no futuro -->
+                <article class="product-card">
+                    <h3 class="product-name">CESTA DE LEGUMES (5kg)</h3>
+                    <img src="images/products/legumes.jpg" alt="Cesta de Legumes" class="product-image">
+                    <span class="product-price">R$ 25,90</span>
+                    <button class="cart-button">+</button>
+                </article>
+                <!-- Outros produtos... -->
+            </div>
+        </section>
+
+        <!-- Seção de Produtos Caseiros -->
+        <section class="product-section">
+            <h2 class="section-title caseiros">PRODUTOS CASEIROS</h2>
+            <div class="product-grid" id="caseiros-grid">
+                <!-- Produtos caseiros... -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Botão do carrinho -->
+    <button class="floating-cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-text">Ver Carrinho (R$ 0,00)</span>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
