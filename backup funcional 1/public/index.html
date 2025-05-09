@@ -11,12 +11,33 @@
 </head>
 
 <body>
+    <!-- Overlay do Carrinho -->
+    <div id="cart-overlay" class="cart-overlay"></div>
+    
+    <!-- Sidebar do Carrinho -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button id="close-cart" class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items-container">
+            <!-- Itens serão inseridos aqui via JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-container">
+                <p class="cart-total">Total: <span id="cart-total">R$ 0,00</span></p>
+                <button id="clear-cart" class="clear-cart-btn">Limpar Carrinho</button>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
     <header class="main-header">
         <!-- Banner com logo -->
         <div class="banner">
-            <img src="images/banner.png"Armazém do Sítio" class="banner-image">
+            <img src="images/banner.png" alt="Armazém do Sítio" class="banner-image">
             <div class="logo-container">
-                <img src="images/logo.png"Logo Armazém do Sítio" class="logo">
+                <img src="images/logo.png" alt="Logo Armazém do Sítio" class="logo">
             </div>
         </div>
 
@@ -45,14 +66,13 @@
         <section class="product-section">
             <h2 class="section-title hortifruti">HORTIFRUTI</h2>
             <div class="product-grid" id="hortifruti-grid">
-                <!-- Produtos serão gerados dinamicamente via JS no futuro -->
                 <article class="product-card">
-                    <h3 class="product-name">CESTA DE LEGUMES (5kg)</h3>
-                    <img src="images/products/legumes.jpg" alt="Cesta de Legumes" class="product-image">
-                    <span class="product-price">R$ 25,90</span>
+                    <h3 class="product-name">NOME</h3>
+                    <span class="product-price">R$ 0,00</span>
+                    <img src="caminho/da/imagem.jpg" class="product-image">
                     <button class="cart-button">+</button>
                 </article>
-                <!-- Outros produtos... -->
+                <!-- Outros produtos podem ser adicionados com a mesma estrutura -->
             </div>
         </section>
 
@@ -65,12 +85,12 @@
         </section>
     </main>
 
-    <!-- Botão do carrinho -->
-    <button class="floating-cart">
+    <!-- Botão do carrinho flutuante -->
+    <button class="floating-cart" id="floating-cart">
         <span class="cart-icon">🛒</span>
-        <span class="cart-text">Ver Carrinho (R$ 0,00)</span>
+        <span class="cart-text">Ver Carrinho (<span id="cart-count">0</span> itens - R$ <span id="cart-sum">0,00</span>)</span>
     </button>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
